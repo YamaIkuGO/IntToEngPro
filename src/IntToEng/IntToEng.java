@@ -16,14 +16,29 @@ public class IntToEng {
     // 数値を英訳する変換するメソッド
     static String translateEng(int n) {
     	//数字を読み取る
-    	
+    	String number = String.valueOf(n);
     	//0~19
     	String[] NumPart1 = {"zero", "one", "two", "three", "four","five", "six", 
     			"seven", "eight", "nine","ten", "eleven", "twelve", "thirteen", 
     			"fourteen","fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
     	
     	
-        return "";
+    	String[] NumPart2 = {"","","twenty", "thirty", "forty", "fifty", "sixty",
+    	"seventy", "eighty", "ninety"};
+
+    	int tenplace=n/10;//十の位
+    	int oneplace=n%10;//一の位
+    	
+
+    	if(n>0&&n<20){
+    		number =NumPart1[n];
+    		return number;
+    	}else{
+    		number = NumPart2[tenplace]+" "+NumPart1[oneplace];
+    		return number;
+    	
+
     }
-	
+
+    }
 }
