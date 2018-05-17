@@ -26,6 +26,7 @@ public class IntToEng {
     	"fifty", "sixty","seventy", "eighty", "ninety"};
     	
     	int tenplace=n/10;//10の位
+    	
     	int oneplace=n%10;//1の位
   
         if(n>0&&n<20){
